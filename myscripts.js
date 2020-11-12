@@ -67,7 +67,6 @@ const sumEvens = () => {
     let numberArray = stringsToNumbs(strNums);
     let evenArray = numberArray.filter(numb => numb % 2 === 0);
     let sum = evenArray.reduce((total, amount) => total + amount);
-    console.log(sum);
     return sum;
 }
 
