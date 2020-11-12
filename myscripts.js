@@ -142,13 +142,34 @@ const weather = [
         visibility: 11.14056410562316,
         predictability: 71
     },
-],
+]
 
-// //using a higher order function, create an array of the unique 'weather_state_name' values of the weather array. Your function should return the following array ['Light Cloud', 'Heavy Cloud', 'Showers']
-// const weatherStates =
-//     console.log(weatherStates)
+//using a higher order function, create an array of the unique 'weather_state_name' values of the 
+//weather array. Your function should return the following array:
+// ['Light Cloud', 'Heavy Cloud', 'Showers']
 
-// //find the id of the object in weather that has a min_temp of 15.915
 
-// const idealTemp =
-//     console.log(idealTemp)
+const weatherStates = () => {
+    let stateArray = [];
+
+    weather.forEach(vari => stateArray.push(vari.weather_state_name));
+    let uniqueWeather = [...new Set(stateArray)];
+    return uniqueWeather
+};
+
+console.log(weatherStates());
+
+//find the id of the object in weather that has a min_temp of 15.915
+
+const idealTemp = () => {
+    for (let i = 0; i < weather.length; i++) {
+        if (weather[i].min_temp === 15.915) {
+            return weather[i].id;
+        }
+    }
+};
+
+
+
+
+console.log(idealTemp()); 
