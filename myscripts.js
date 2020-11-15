@@ -57,6 +57,7 @@ const stringsToNumbs = (numbers) => {
     return numberArray;
 }
 
+console.log("Given 1000 digits of PI as strings, return an array of the digits as numbers");
 console.log(stringsToNumbs(strNums));
 
 // With the same numbers, find the sum of the even values
@@ -70,6 +71,7 @@ const sumEvens = () => {
     return sum;
 }
 
+console.log("With the same numbers, find the sum of the even values");
 console.log(sumEvens());
 
 const weather = [
@@ -156,6 +158,7 @@ const weatherStates = () => {
     return uniqueWeather
 };
 
+console.log("using a higher order function, create an array of the unique 'weather_state_name' values of the weather array");
 console.log(weatherStates());
 
 //find the id of the object in weather that has a min_temp of 15.915
@@ -170,5 +173,5 @@ const idealTemp = () => {
 
 
 
-
+console.log("find the id of the object in weather that has a min_temp of 15.915");
 console.log(idealTemp()); 
